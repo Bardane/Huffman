@@ -45,11 +45,12 @@ void Decodage_txt(char* nomdico,char* nomaconv){
     FILE* decodage = fopen("decodage.txt","w");
     char* encour = (char*)malloc(20 * sizeof(char));
     int i = 0;
-    while((char c = fgetc(dico_txt)) != EOF){
+    char c;
+    while((c = fgetc(dico_txt)) != EOF){
         encour[i] = c;
         char aecrire;
         if((aecrire = bintochar(encour,dico_txt)) != NULL){
-            fputc(aecrire,dcodage);
+            fputc(aecrire,decodage);
             i = 0;
             free(encour);
             char* encour = (char*)malloc(20 * sizeof(char));
@@ -64,8 +65,6 @@ void Decodage_txt(char* nomdico,char* nomaconv){
 char bintochar(char* encour,FILE* dico_txt){
     void rewind(dico_txt);//on positionne le pointeur sur le debut du fichier
     char bin[20];
-    while( (fscanf(dico_txt,"%s : %c",bin,&c))
-
     char c;
     do{
         fscanf(dico_txt,"%s : %c",bin,&c);
@@ -75,6 +74,5 @@ char bintochar(char* encour,FILE* dico_txt){
         else{
             return NULL;
         }
-    }
-
+    }while(dico_txt != EOF);
 }
