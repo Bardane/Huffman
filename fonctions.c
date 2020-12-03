@@ -38,3 +38,43 @@ int Nb_char_txt(char* nom_txt){
     return nbchar;
 }
 
+void Decodage_txt(char* nomdico,char* nomaconv){
+    FILE* dico_txt = fopen(nomdico,"r");
+    FILE* encode = fopen(nomaconv,"r");
+
+    FILE* decodage = fopen("decodage.txt","w");
+    char* encour = (char*)malloc(20 * sizeof(char));
+    int i = 0;
+    while((char c = fgetc(dico_txt)) != EOF){
+        encour[i] = c;
+        char aecrire;
+        if((aecrire = bintochar(encour,dico_txt)) != NULL){
+            fputc(aecrire,dcodage);
+            i = 0;
+            free(encour);
+            char* encour = (char*)malloc(20 * sizeof(char));
+        }
+        else{
+            i++;
+        }
+    }
+
+}
+
+char bintochar(char* encour,FILE* dico_txt){
+    void rewind(dico_txt);//on positionne le pointeur sur le debut du fichier
+    char bin[20];
+    while( (fscanf(dico_txt,"%s : %c",bin,&c))
+
+    char c;
+    do{
+        fscanf(dico_txt,"%s : %c",bin,&c);
+        if (strcmp(bin,encour) == 0){
+            return c;
+        }
+        else{
+            return NULL;
+        }
+    }
+
+}
