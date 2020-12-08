@@ -196,7 +196,7 @@ void Codage_Texte(Noeud_Dico* dico, char* nom_txt){
     //printf("\nDEBUT CODAGE");
     if (dico != NULL){
         FILE* texte = fopen(nom_txt,"r");
-        FILE* encodage = fopen("compressfile.txt","w");
+        FILE* encodage = fopen("compressfile.bin","wb");
         Noeud_Dico* tmp;
         char caractere;
         while ((caractere = fgetc(texte)) != EOF){
