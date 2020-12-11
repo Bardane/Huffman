@@ -7,7 +7,7 @@
  * \brief Programme de compresion de texte.
  * \author Arthur Arnaud Romain Theo
  * \version 0.2
- * \date 4 decembre 2001
+ * \date 4 decembre 2020
  *
  * Programme d encodage decodage
  *
