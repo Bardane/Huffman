@@ -3,6 +3,16 @@
 #include <string.h>
 #include "arbre.h"
 
+/**
+ * \file arbre.c
+ * \brief Programme de compresion de texte.
+ * \author Arthur Arnaud Romain Theo
+ * \version 0.2
+ * \date 4 decembre 2020
+ *
+ */
+
+
 void free_Ab(Noeud2* Ab){
     if (Ab==NULL){
         return;

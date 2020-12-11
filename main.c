@@ -2,10 +2,28 @@
 #include <stdlib.h>
 #include "dico.h"
 #include "arbre.h"
+/**
+ * \file main.c
+ * \brief Programme de compresion de texte.
+ * \author Arthur Arnaud Romain Theo
+ * \version 0.2
+ * \date 4 decembre 2020
+ *
+ * Programme d encodage decodage
+ *
+ */
+
 
 void print_Title(){
     printf("#######                  #####                                                                   \n   #     #    #  #####  #     #   ####   #    #  #    #  ######  #####   #####  ######  #####    \n   #      #  #     #    #        #    #  ##   #  #    #  #       #    #    #    #       #    #   \n   #       ##      #    #        #    #  # #  #  #    #  #####   #    #    #    #####   #    #   \n   #       ##      #    #        #    #  #  # #  #    #  #       #####     #    #       #####    \n   #      #  #     #    #     #  #    #  #   ##   #  #   #       #   #     #    #       #   #    \n   #     #    #    #     #####    ####   #    #    ##    ######  #    #    #    ######  #    #   \n");
 }
+
+/**
+ * \fn int menu (void)
+ * \brief choix entre compresser un fichier ou Quitter le programme.
+ *
+ * \return EXIT_SUCCESS - retourne 1 ou 2.
+ */
 
 int menu(){
     printf("\nMENU :\n");
@@ -17,6 +35,12 @@ int menu(){
     return input;
 }
 
+/**
+ * \fn int main (void)
+ * \brief Entrée du programme.
+ *
+ * \return EXIT_SUCCESS - Arrêt normal du programme.
+ */
 int main(){
 
     print_Title();
@@ -71,7 +95,7 @@ int main(){
             free_tree_dico(dico);
             free_Ab(Ab_Huffman);
 
-            printf("\n\n COMPRESSION TERMINEE\n");
+            printf("\n\n COMPRESSION TERMINEE");
         }
     }while (input != 2);
 }

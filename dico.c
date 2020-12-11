@@ -3,6 +3,15 @@
 #include <string.h>
 #include "dico.h"
 
+/**
+ * \file dico.c
+ * \brief Programme d ecriture de dictionnaire d arbe de Huffman.
+ * \author Arthur Arnaud Romain Theo
+ * \version 0.2
+ * \date 6 decembre 2020
+ *
+ */
+
 void reset(char* chaine, int taille){
     for (int i=0;i<taille;i++){
         chaine[i] = '\0';
@@ -193,10 +202,10 @@ void Creation_Dico(Noeud2* Ab_Huffman, Noeud_Dico** dico){
 }
 
 void Codage_Texte(Noeud_Dico* dico, char* nom_txt){
-    //printf("\nDEBUT CODAGE");
+    printf("\nDEBUT CODAGE");
     if (dico != NULL){
         FILE* texte = fopen(nom_txt,"r");
-        FILE* encodage = fopen("compressfile.bin","wb");
+        FILE* encodage = fopen("compressfile.txt","w");
         Noeud_Dico* tmp;
         char caractere;
         while ((caractere = fgetc(texte)) != EOF){
