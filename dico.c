@@ -8,7 +8,7 @@
  * \brief Programme d ecriture de dictionnaire d arbe de Huffman.
  * \author Arthur Arnaud Romain Theo
  * \version 0.2
- * \date 6 decembre 2001
+ * \date 6 decembre 2020
  *
  */
 
